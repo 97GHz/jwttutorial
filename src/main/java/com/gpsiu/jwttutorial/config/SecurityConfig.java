@@ -67,7 +67,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
 
                 .and()
-                .apply(new JwtSecurityConfig(tokenProvider));
+                .apply(new JwtSecurityConfig(tokenProvider))
+
+//                .and()
+//                .formLogin().disable();
     }
 
     // CORS 환경설정 메서드
